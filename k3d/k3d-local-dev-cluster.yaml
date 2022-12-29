@@ -1,6 +1,6 @@
-apiVersion: k3d.io/v1alpha3
+apiVersion: k3d.io/v1alpha4
 kind: Simple
-name: jku-dev 
+name: cloud-native
 servers: 1
 agents: 4
 ports:

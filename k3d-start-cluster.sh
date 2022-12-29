@@ -8,6 +8,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 # the argo-cd intial admin password can be read with the following command:
 # kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
+# kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 # OR
 # replace it with your own fixed admin password
 # https://www.browserling.com/tools/bcrypt

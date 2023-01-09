@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-python-app
+  labels:
+    app: my-python-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-python-app
+  template:
+    metadata:
+      labels:
+        app: my-python-app
+    spec:
+      containers:
+      - name: my-python-app
+        image: python:3.8
+        command: ["bash", "-c"]
+        args: ["pip install -r /python-app/requirements.txt && python /python-app/app.py"]
+        volumeMounts:
+        - mountPath: /app
+          name: app-volume
+      volumes:
+      - name: app-volume
+        hostPath:
+          path: /python-app/app.py"

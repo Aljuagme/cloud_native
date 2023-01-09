@@ -18,6 +18,8 @@ spec:
       containers:
       - name: my-python-app
         image: python:3.8
+        ports:
+          - containerPort: 5000
         command: ["bash", "-c"]
         args: ["pip install -r /python-app/requirements.txt && python /python-app/app.py"]
         volumeMounts:

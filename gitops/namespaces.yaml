@@ -18,3 +18,10 @@ metadata:
   name: staging
   labels:
     name: staging
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: my-python-app
+  labels:
+    name: my-python-app

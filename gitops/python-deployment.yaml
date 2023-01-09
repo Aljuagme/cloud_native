@@ -28,4 +28,4 @@ spec:
       volumes:
       - name: app-volume
         hostPath:
-          path: /python-app"
+          path: /python-app

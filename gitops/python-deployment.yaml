@@ -21,7 +21,7 @@ spec:
         ports:
           - containerPort: 5000
         command: ["bash", "-c"]
-        args: ["pip install -r /python-app/requirements.txt && python /app.py"]
+        args: ["pip install -r requirements.txt && python app.py"]
         volumeMounts:
         - mountPath: /
           name: app-volume

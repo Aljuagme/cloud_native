@@ -28,6 +28,7 @@ metadata:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
+  - host: my-python-app.com
   - http:
       paths:
       - path: /

@@ -23,7 +23,7 @@ spec:
         command: ["bash", "-c"]
         args: ["pip install -r /requirements.txt && python /app.py"]
         volumeMounts:
-        - mountPath: /
+        - mountPath: /python-app
           name: app-volume
       volumes:
       - name: app-volume

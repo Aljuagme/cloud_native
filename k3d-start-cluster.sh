@@ -6,15 +6,13 @@ kubectl create namespace argocd
 # install argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-# Forward?
-kubectl port-forward -n argocd svc/argocd-server 8080:443 &
 
 # the argo-cd intial admin password can be read with the following command:
-printf "\n"
-echo "PASSWORD FOR ARGOCD: "
-kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
+# printf "\n"
+# echo "PASSWORD FOR ARGOCD: "
+# kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
 # kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
-printf "\n\n"
+# printf "\n\n"
 # OR
 # replace it with your own fixed admin password
 # https://www.browserling.com/tools/bcrypt
@@ -24,6 +22,8 @@ kubectl -n argocd patch secret argocd-secret -p '{"stringData": {"admin.password
 # start the GitOps with creation of argo-cd app
 kubectl -n argocd apply -f ./argo-cd/argo-cd-app.yaml
 
-
+sleep 180
+# Forward?
+kubectl port-forward -n argocd svc/argocd-server 8080:443
 
 

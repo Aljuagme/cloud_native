@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-python-app
-  namespace: my-python-app
+  namespace: python-namespace
   labels:
     app: my-python-app
 spec:
@@ -21,9 +21,9 @@ spec:
         command: ["bash", "-c"]
         args: ["pip install -r /python-app/requirements.txt && python /python-app/app.py"]
         volumeMounts:
-        - mountPath: /app
+        - mountPath: /python-app
           name: app-volume
       volumes:
       - name: app-volume
         hostPath:
-          path: /python-app/app.py"
+          path: /python-app"

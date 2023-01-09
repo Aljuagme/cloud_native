@@ -22,6 +22,6 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: my-python-app
+  name: python-namespace
   labels:
-    name: my-python-app
+    name: python-namespace

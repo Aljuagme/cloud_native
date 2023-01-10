@@ -22,10 +22,11 @@ kubectl -n argocd patch secret argocd-secret -p '{"stringData": {"admin.password
 # start the GitOps with creation of argo-cd app
 kubectl -n argocd apply -f ./argo-cd/argo-cd-app.yaml
 
-sleep 200
-# Forward?
+# Uncomment if new
+# sleep 200 
+# Forward
 kubectl port-forward -n argocd svc/argocd-server 8080:443 &
 
-kubectl port-forward -n python-namespace svc/python-service 5000:31155 
+# kubectl port-forward -n python-namespace svc/python-service 5000:31155 
 
 

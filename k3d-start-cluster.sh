@@ -24,6 +24,8 @@ kubectl -n argocd apply -f ./argo-cd/argo-cd-app.yaml
 
 sleep 200
 # Forward?
-kubectl port-forward -n argocd svc/argocd-server 8080:443
+kubectl port-forward -n argocd svc/argocd-server 8080:443 &
+
+kubectl port-forward -n python-namespace svc/python-service 5000:31155 
 
 

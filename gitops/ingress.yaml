@@ -25,7 +25,8 @@ metadata:
   name: my-python-app
   namespace: python-namespace
   annotations:
-    ingress.kubernetes.io/ssl-redirect: "false"
+    #ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: my-python-app.com

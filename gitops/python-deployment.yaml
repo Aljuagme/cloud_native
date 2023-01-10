@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: my-python-app
-        image: flask-app:latest
+        image: tatooine7/flask-app:latest
         ports:
           - containerPort: 5000

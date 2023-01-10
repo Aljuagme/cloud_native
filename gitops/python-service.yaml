@@ -11,4 +11,4 @@ spec:
   - port: 5000
     targetPort: 5000
   selector:
-    app: python-deployment
+    app: my-python-app

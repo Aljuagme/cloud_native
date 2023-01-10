@@ -27,6 +27,5 @@ sleep 200
 # Forward
 kubectl port-forward -n argocd svc/argocd-server 8080:443 &
 
-# kubectl port-forward -n python-namespace svc/python-deployment 5000:31155 
-
+kubectl port-forward deployment/python-deployment -n python-namespace 5000:5000
 

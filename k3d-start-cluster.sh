@@ -23,7 +23,7 @@ kubectl -n argocd patch secret argocd-secret -p '{"stringData": {"admin.password
 kubectl -n argocd apply -f ./argo-cd/argo-cd-app.yaml
 
 # Uncomment if new
-sleep 200 
+# sleep 200 
 # Forward
 kubectl port-forward -n argocd svc/argocd-server 8080:443 &
 

@@ -21,7 +21,7 @@ spec:
         ports:
           - containerPort: 5000
         command: ["bash", "-c"]
-        args: ["pip install click==8.0.3 colorama==0.4.4 Flask==2.2.2 itsdangerous==2.1.2 Jinja2==3.1.2 MarkupSafe==2.1.1 Werkzeug==2.2.2 && ls && ls python-app && python python-app/app.py"]
+        args: [" pip install click==8.0.3 colorama==0.4.4 Flask==2.2.2 itsdangerous==2.1.2 Jinja2==3.1.2 MarkupSafe==2.1.1 Werkzeug==2.2.2 && ls && ls python-app && python python-app/app.py "]
         volumeMounts:
         - mountPath: /python-app
           name: app-volume
